@@ -1,1 +1,1 @@
-# reader_app
+# reader_app - awesome application
