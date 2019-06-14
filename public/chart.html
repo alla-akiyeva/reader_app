@@ -37,7 +37,7 @@
         <ul class="right hide-on-med-and-down">
             
             <li ><a href="public/chart.html" class="modal-trigger blue-text">Dashboard</a></li>
-            <li><a href="public/post.html" class="modal-trigger blue-text">Post</a></li>
+            <li><a href="public/library.html" class="modal-trigger blue-text">Library</a></li>
             <li><a href="public/category.html" class="modal-trigger blue-text">Category</a></li>
             <li><a href="public/user.html" class="modal-trigger blue-text">User</a></li>
             <li><a href="./home.html" class="modal-trigger blue-text">Logout</a></li>
@@ -145,30 +145,30 @@
                         </tr>
                         </thead>  
                         <tbody>
-                            <tr>
-                             <td>id</td>
-                             <td>title</td>
-                             <td>writer</td>
-                             <td>
+                        <tr>
+                         <td>id</td>
+                         <td>title</td>
+                         <td>writer</td>
+                         <td>
+                        <a href="library.html" class="btn blue">details</a>
+                         </td>
+                        </tr>
+                        <tr>
+                         <td>id</td>
+                         <td>title</td>
+                         <td>writer</td>
+                         <td>
+                        <a href="library.html" class="btn blue">details</a>
+                        </td>
+                        </tr>
+                         <tr>
+                            <td>id</td>
+                            <td>title</td>
+                            <td>writer</td>
+                            <td>
                              <a href="library.html" class="btn blue">details</a>
                             </td>
                             </tr>
-                            <tr>
-                                    <td>id</td>
-                                    <td>title</td>
-                                    <td>writer</td>
-                                    <td>
-                                    <a href="library.html" class="btn blue">details</a>
-                                   </td>
-                                   </tr>
-                                   <tr>
-                                        <td>id</td>
-                                        <td>title</td>
-                                        <td>writer</td>
-                                        <td>
-                                        <a href="library.html" class="btn blue">details</a>
-                                       </td>
-                                       </tr>
                         </tbody>
                     </table>
                 </div>
@@ -206,53 +206,120 @@
         </div>
     </section>
 
-   
-  <!-- fixed action button -->
-
-  <div class="fixed-action-btn">
-      <a class="btn-floating btn-large red">
-          <i class="material-icons">add</i>
-      </a>
-      <ul>
-        <li>
-            <a href="#edit-modal" class="modal-trigger btn-floating blue">
-            <i class="materil-icons">mode_edit</i>
-            </a>
-        </li>
-        <li>
-            <a href="#post-modal" class="modal-trigger btn-floating blue">
-                    <i class="materil-icons">folder</i>
-            </a>
-        </li>
-
-      </ul>
-  </div>
-
   <!-- Add Upload Modal -->
 
-  <div id="post-modal" class="modal">
+<div id="post-modal" class="modal">
    <div class="modal-content">
      <h4>Edit your review</h4>
        <form>
-       <div class="input-field">
+        <div class="input-field">
         <input type="text" id="title">
         <label for="title">title</label>
-      </div>
-
-       </form>
+       </div>
+      </form>
    </div>
+</div>
 
 
-  </div>
+ <!-- fixed action button -->
+
+ <div class="fixed-action-btn">
+     <a class="btn-floating btn-large red">
+        <i class="material-icons">add</i>
+    </a>
+     <ul>
+      <li>
+        <a href="#edit-modal" class="modal-trigger btn-floating blue">
+          <i class="materil-icons">mode_edit</i>
+        </a>
+          </li>
+          <li>
+              <a href="#post-modal" class="modal-trigger btn-floating blue">
+                      <i class="materil-icons">folder</i>
+              </a>
+          </li>
+  
+        </ul>
+    </div>
+  
+
+
 
 
  <!-- footer -->
  <footer class="section blue darken-s white-text center">
         <p>team 2A&K Copyright &copy 2019</p>
-    </footer>
+ </footer>
   
 
-  <!-- Preloader -->
+<!-- fixed action button -->
+
+     <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+           <i class="material-icons">add</i>
+        </a>
+        <ul>
+          <li>
+             <a href="library.html" class="modal-trigger btn-floating blue">
+             <i class="materil-icons">mode_edit</i>
+             </a>
+             </li>
+             <li>
+              <a href="#post-modal" class="modal-trigger btn-floating blue">
+             <i class="materil-icons">folder</i>
+            </a>
+             </li>
+             <li>
+             <a href="#category-modal" class="modal-trigger btn-floating blue">
+            <i class="materil-icons">mode_edit</i>
+            </a>
+            </li>  
+            <li>
+              <a href="#edit-modal" class="modal-trigger btn-floating blue">
+                <i class="materil-icons">mode_edit</i>
+                </a>
+            </li>       
+          </ul>
+     </div>
+     
+    <!-- Add post modal -->
+<div id="post-modal" class="modal">
+<div class="modal-content">
+    <h4>Add Book</h4>
+   <form>
+       <div class="imput-field">
+           <input type="text" id="title">
+           <label for="title">Title</label>
+       </div>
+       <div class="imput-field">
+            <input type="text" id="writer">
+            <label for="title">Writer</label>
+        </div>
+        <div class="imput-field">
+                <input type="text" id="review">
+                <label for="title">Review</label>
+        </div>
+         
+
+
+
+
+
+   </form>
+</div>
+</div>
+
+   
+   
+   
+   
+
+
+  
+  
+  
+  
+    <!-- Preloader -->
 
   <div class="loader preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
@@ -304,9 +371,12 @@
         
         // modal for logout 
         $('.modal').modal();
-        
-    
-        // couter effect animation
+
+        // side nav
+        $('.sidenav').sidenav();
+
+
+       // couter effect animation
         $('.count').each(function(){
             $(this).prop('counter', 0).animate({
                 counter: $(this).text()
@@ -328,11 +398,11 @@
                     </div>
                  </li>`;
 
-            $('.wishlist').append(output);
+    $('.wishlist').append(output);
             
-            Materialize.toast('Wishing list added', 3000);
-             e.preventDefault();
-       });
+    Materialize.toast('Wishing list added', 3000);
+    e.preventDefault();
+      
   
     // Delete quick-wish-list
     $('.wishlist').on('click',  '.delete',function(){
@@ -341,10 +411,10 @@
         
         e.preventDefault();
       
-    });
+     });
     });
    });
-
+ });
 </script>    
 </body>
 </html>
