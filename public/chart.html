@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Dashboard</title>
     <style>
+     .section{
+         padding:60px
+     }
+
+
+
     .loader{
         position:absolute;
         top:53%;
@@ -81,34 +87,7 @@
 </div>
 </header>
 
-<!-- section: Reading min with icon -->
-<section class="section section-stats center">
-<div class="row">
-  <div class="col s12 m6 l6">  
-   <div class="card-panel pink lighten-1 white-text center">
-     <i class="material-icons large">access_time</i>
-      <h4>Mothly reading minutes</h4>
-      <h2 class="count">1280</h2>
-      <div class="progress grey lighten-1">
-       <div class="determinate white center" style="width: 40%"  ></div>
-    </div>
-  </div>
-</div>   
-
-<!-- section: Books has read with icon -->
-<div class="col s12 m6 l6">  
-        <div class="card-panel blue lighten-1 white-text center">
-          <i class="material-icons large">import_contacts</i>
-           <h4>Books total</h4>
-           <h2 class="count">21</h2>
-           <div class="progress grey lighten-1">
-            <div class="determinate white center" style="width: 40%"  ></div>
-         </div>
-       </div>
-     </div>   
-  </section>
-
-  <!-- section: Reading minutes -->
+ <!-- section: Reading minutes charts -->
 
    <section class="section section-visitors blue lighten-4">
   <div class="row">
@@ -121,38 +100,81 @@
   </div>
 </section>
 
+<!-- section: Reading min with icon -->
+<section class="section section-stats center">
+        <div class="row">
+          <div class="col s12 m6 l6">  
+           <div class="card-panel pink lighten-1 white-text center">
+             <i class="material-icons large">access_time</i>
+              <h4>Mothly reading minutes</h4>
+              <h2 class="count">1280</h2>
+              <div class="progress grey lighten-1">
+               <div class="determinate white center" style="width: 40%"  ></div>
+            </div>
+          </div>
+        </div>   
+        
+        <!-- section: Books has read with icon -->
+        <div class="col s12 m6 l6">  
+                <div class="card-panel blue lighten-1 white-text center">
+                  <i class="material-icons large">import_contacts</i>
+                   <h4>Books total</h4>
+                   <h2 class="count">21</h2>
+                   <div class="progress grey lighten-1">
+                    <div class="determinate white center" style="width: 40%"  ></div>
+                 </div>
+               </div>
+             </div>   
+          </section>
+        
+<!-- recently added books -->
+
 <section class="section section-library">
     <div class="row">
         <div class="col s12 m6 l8">
           <div class="card">
               <div class="card-content">
                   <span class="card-title">Recently added</span>
-                  <table class="striped">
+                    <table class="striped">
                       <thead>   
                         <tr>
-                          <td>id</td>
-                          <td>title</td>
-                          <td>writer</td>
-                          <td>
-                            <a href="./public/library.html" class="btn blue lighten-2">Detail</a>  
-                          </td>
+                          <th>ID</th>
+                          <th>Title</th>
+                          <th>Writer</th>
+                          <th></th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>id</td>
-                            <td>title</td>
-                            <td>writer</td>
-                            <td>
-                                <a href="./public/library.html" class="btn blue lighten-2">Detail</a>  
-                              </td>
+                        </thead>  
+                        <tbody>
+                            <tr>
+                             <td>id</td>
+                             <td>title</td>
+                             <td>writer</td>
+                             <td>
+                             <a href="library.html" class="btn blue">details</a>
+                            </td>
                             </tr>
-                          </tbody>
-                          </table>
-                       </div>
-                    </div>
-                 </div>
-               <div class="col s12 m6 l4">
+                            <tr>
+                                    <td>id</td>
+                                    <td>title</td>
+                                    <td>writer</td>
+                                    <td>
+                                    <a href="library.html" class="btn blue">details</a>
+                                   </td>
+                                   </tr>
+                                   <tr>
+                                        <td>id</td>
+                                        <td>title</td>
+                                        <td>writer</td>
+                                        <td>
+                                        <a href="library.html" class="btn blue">details</a>
+                                       </td>
+                                       </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
                 <div class="card">
                   <div class="card-content">
                      <span class="card-title">Quick wish list</span>
@@ -161,19 +183,22 @@
                               <input type="text" id="wishlist" placeholder="Add books...">
                           </div>
                       </form>
-                       <ul class="collection wish-list">
+                       <ul class="collection wishlist">
                         <li class="collection-item">
-                          <div>
-                              <a href="#!" class="secondary-content delete"></a>
+                          <div>item 2
+                              <a href="#!" class="secondary-content delete">
                                 <i class="material-icons">close</i>
-                            </div>
+                              </a>
+                        </div>
                         </li>
                         <li class="collection-item">
-                            <div>
-                                <a href="#!" class="secondary-content delete"></a>
-                                    <i class="material-icons">close</i>
+                                <div>item 2
+                                    <a href="#!" class="secondary-content delete">
+                                      <i class="material-icons">close</i>
+                                  </a>
                                   </div>
                               </li>
+                       
                          </ul>
                     </div>
                 </div>
@@ -181,11 +206,7 @@
         </div>
     </section>
 
-    <!-- footer -->
-  <footer class="section blue darken-s white-text center">
-      <p>team 2A&K Copyright &copy 2019</p>
-  </footer>
-
+   
   <!-- fixed action button -->
 
   <div class="fixed-action-btn">
@@ -225,7 +246,11 @@
   </div>
 
 
-
+ <!-- footer -->
+ <footer class="section blue darken-s white-text center">
+        <p>team 2A&K Copyright &copy 2019</p>
+    </footer>
+  
 
   <!-- Preloader -->
 
