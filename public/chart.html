@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <!--Import Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Dashboard</title>
+    <style>
+    
+</style>
+</head>
+<body>
+
+    <header>
+    <nav class="nav-wrapper transparent">
+         <div class="container">
+            <a href="public/home.html" class="brand-logo blue-text">Home</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                <i class="material-icons blue-text">menu</i>
+            </a>
+        <ul class="right hide-on-med-and-down">
+            
+            <li ><a href="public/chart.html" class="modal-trigger blue-text">Dash box</a></li>
+            <li><a href="public/post.html" class="modal-trigger blue-text">Post</a></li>
+            <li><a href="public/category.html" class="modal-trigger blue-text">Category</a></li>
+            <li><a href="public/user.html" class="modal-trigger blue-text">User</a></li>
+            <li><a href="#logOut" class="modal-trigger blue-text">Logout</a></li>
+
+        </ul>
+        <ul class="sidenav " id="mobile-links">
+            <li ><a href="public/home.html" class="blue-text">Home</a></li>
+            <li ><a href="#login" class= "modal-trigger blue-text">Login</a></li>
+    </ul>
+   </div>
+</nav>
+
+<div class="container center"></div>
+ 
+
+   <div class="modal" id="login">
+     <h5 class="modal-close">&#10005;</h5>
+    
+    <div class="modal-content center">
+            <h4 class="blue-text">Login Form</h4><br>
+        <form action="#">
+       
+        <div class="input-field">
+           <i class="material-icons prefix">person</i>
+           <input type="text" id="username">
+           <label for="username">Username</label>
+        </div><br>
+
+        <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="password">
+                <label for="password">Password</label>
+             </div><br>
+
+         <div class="left">
+                <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Remember me</span>
+                      </label>
+             </div><br>     
+
+             <input type=" submit" value="login" class="btn-large">
+
+
+        </form>
+    </div>
+</div>
+</header>
+
+<!-- section: Book -->
+<section class="section section-stats center">
+<div class="row">
+  <div class="col s12 m6 l6">  
+   <div class="card-panel blue lighten-1 white-text center">
+     <i class="material-icons">access_time</i>
+      <h4>Mothly reading minutes</h4>
+      <h2 class="cout">280</h2>
+      <div class="progress grey lighten-1">
+       <div class="determinate white center" style="width: 40%"  ></div>
+    </div>
+  </div>
+</div>   
+
+<div class="col s12 m6 l6">  
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons">import_contacts</i>
+           <h4>Books total</h4>
+           <h2 class="cout">6</h2>
+           <div class="progress grey lighten-1">
+            <div class="determinate white center" style="width: 40%"  ></div>
+         </div>
+       </div>
+     </div>   
+  
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!-- Compiled and minified JavaScript -->
+        
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+        $('.modal').modal();
+    })
+</script>    
+</body>
+</html>
