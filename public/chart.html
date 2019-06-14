@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Dashboard</title>
     <style>
-    
+    .loader{
+        position:absolute;
+        top:53%;
+        left:47%;
+    }
 </style>
 </head>
 <body>
@@ -77,40 +81,100 @@
 </div>
 </header>
 
-<!-- section: Book -->
+<!-- section: Reading min with icon -->
 <section class="section section-stats center">
 <div class="row">
   <div class="col s12 m6 l6">  
    <div class="card-panel pink lighten-1 white-text center">
      <i class="material-icons large">access_time</i>
       <h4>Mothly reading minutes</h4>
-      <h2 class="cout">280</h2>
+      <h2 class="count">1280</h2>
       <div class="progress grey lighten-1">
        <div class="determinate white center" style="width: 40%"  ></div>
     </div>
   </div>
 </div>   
 
+<!-- section: Books has read with icon -->
 <div class="col s12 m6 l6">  
         <div class="card-panel blue lighten-1 white-text center">
           <i class="material-icons large">import_contacts</i>
            <h4>Books total</h4>
-           <h2 class="cout">6</h2>
+           <h2 class="count">21</h2>
            <div class="progress grey lighten-1">
             <div class="determinate white center" style="width: 40%"  ></div>
          </div>
        </div>
      </div>   
-  
+  </section>
 
+  <!-- section: Reading min -->
 
+   <section class="section section-visitors blue lighten-4">
+  <div class="row">
 
+    <div class="col s12 m12 l12">
+        <div class="card-panel">
+            <div id="chartContainer" style="height:350px; width:100%;"></div>
+        </div>
+    </div>
+  </div>
+</section>
 
+<section class="section section-library">
+    <div class="row">
+        <div class="col s12 m6 l8">
+          <div class="card">
+              <div class="card-content">
+                  <span class="card-title">Recently added</span>
+                  <table class="striped">
+                      <thead>   
+                        <tr>
+                          <td>id</td>
+                          <td>title</td>
+                          <td>writer</td>
+                          <td>
+                            <a href="library.html" class="btn blue lighten-2"></a>  
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td>title</td>
+                            <td>writer</td>
+                            <td>
+                              <a href="library.html" class="btn blue lighten-2"></a>  
+                            </td>
+                            </tr>
+                      </thead>
+                      </div>
 
+            </div>
+        </div>
+    </div>
 </section>
 
 
 
+  <!-- Preloader -->
+
+  <div class="loader preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
+
 
 
 
@@ -122,16 +186,30 @@
     
 
 
-<!-- Compiled and minified JavaScript -->
-        
+<!-- Compiled and minified JavaScript -->     
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="./js/chart.js"></script>  
 <script>
-    $(document).ready(function(){
-        // modal for logout
+   
+
+    // Hide sections
+   $('.section').hide();
+
+   setTimeout(function(){
+        $(document).ready(function(){
+        // show sections
+        $('.section').fadeIn(2500);
+
+        // Hide preloader
+        $('.loader').fadeOut();
+        
+        // modal for logout 
         $('.modal').modal();
+        
     
-        // couter
+        // couter effect animation
         $('.count').each(function(){
             $(this).prop('counter', 0).animate({
                 counter: $(this).text()
@@ -139,11 +217,13 @@
           duration:1000,
           easing: 'swing',
           step:function (now){
-            $(this).text(math.ceil(now));
+            $(this).text(Math.ceil(now));
           }
        });
     });
   });
+});
+
 </script>    
 </body>
 </html>
