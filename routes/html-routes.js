@@ -21,6 +21,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/library.html"));
   });
 
+  // chart route loads library.html
+  app.get("/chart", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/chart.html"));
+  });
+
   
 
 };
