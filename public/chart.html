@@ -19,7 +19,7 @@
     }
 </style>
 </head>
-<body>
+<body class="grey lighten-4">
 
     <header>
     <nav class="nav-wrapper transparent">
@@ -30,11 +30,11 @@
             </a>
         <ul class="right hide-on-med-and-down">
             
-            <li ><a href="public/chart.html" class="modal-trigger blue-text">Dash box</a></li>
+            <li ><a href="public/chart.html" class="modal-trigger blue-text">Dashboard</a></li>
             <li><a href="public/post.html" class="modal-trigger blue-text">Post</a></li>
             <li><a href="public/category.html" class="modal-trigger blue-text">Category</a></li>
             <li><a href="public/user.html" class="modal-trigger blue-text">User</a></li>
-            <li><a href="#logOut" class="modal-trigger blue-text">Logout</a></li>
+            <li><a href="./home.html" class="modal-trigger blue-text">Logout</a></li>
 
         </ul>
         <ul class="sidenav " id="mobile-links">
@@ -73,7 +73,7 @@
                       </label>
              </div><br>     
 
-             <input type=" submit" value="login" class="btn-large">
+             <input a href="public/chart.html" type=" submit" value="login" class="btn-large">
 
 
         </form>
@@ -108,7 +108,7 @@
      </div>   
   </section>
 
-  <!-- section: Reading min -->
+  <!-- section: Reading minutes -->
 
    <section class="section section-visitors blue lighten-4">
   <div class="row">
@@ -134,24 +134,96 @@
                           <td>title</td>
                           <td>writer</td>
                           <td>
-                            <a href="library.html" class="btn blue lighten-2"></a>  
+                            <a href="./public/library.html" class="btn blue lighten-2">Detail</a>  
                           </td>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>id</td>
                             <td>title</td>
                             <td>writer</td>
                             <td>
-                              <a href="library.html" class="btn blue lighten-2"></a>  
-                            </td>
+                                <a href="./public/library.html" class="btn blue lighten-2">Detail</a>  
+                              </td>
                             </tr>
-                      </thead>
-                      </div>
-
+                          </tbody>
+                          </table>
+                       </div>
+                    </div>
+                 </div>
+               <div class="col s12 m6 l4">
+                <div class="card">
+                  <div class="card-content">
+                     <span class="card-title">Quick wish list</span>
+                      <form id="wish-form">
+                          <div class="input-field">
+                              <input type="text" id="wishlist" placeholder="Add books...">
+                          </div>
+                      </form>
+                       <ul class="collection wish-list">
+                        <li class="collection-item">
+                          <div>
+                              <a href="#!" class="secondary-content delete"></a>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </li>
+                        <li class="collection-item">
+                            <div>
+                                <a href="#!" class="secondary-content delete"></a>
+                                    <i class="material-icons">close</i>
+                                  </div>
+                              </li>
+                         </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- footer -->
+  <footer class="section blue darken-s white-text center">
+      <p>team 2A&K Copyright &copy 2019</p>
+  </footer>
+
+  <!-- fixed action button -->
+
+  <div class="fixed-action-btn">
+      <a class="btn-floating btn-large red">
+          <i class="material-icons">add</i>
+      </a>
+      <ul>
+        <li>
+            <a href="#edit-modal" class="modal-trigger btn-floating blue">
+            <i class="materil-icons">mode_edit</i>
+            </a>
+        </li>
+        <li>
+            <a href="#post-modal" class="modal-trigger btn-floating blue">
+                    <i class="materil-icons">folder</i>
+            </a>
+        </li>
+
+      </ul>
+  </div>
+
+  <!-- Add Upload Modal -->
+
+  <div id="post-modal" class="modal">
+   <div class="modal-content">
+     <h4>Edit your review</h4>
+       <form>
+       <div class="input-field">
+        <input type="text" id="title">
+        <label for="title">title</label>
+      </div>
+
+       </form>
+   </div>
+
+
+  </div>
+
 
 
 
@@ -221,8 +293,32 @@
           }
        });
     });
-  });
-});
+//   Quick wish list
+   $('#wish-form').submit(function(e){
+   const output = ` <li class="collection-item">
+                     <div>${$('#wishlist').val()}
+                        <a href="#!" class="secondary-content delete">
+                        <i class="material-icons">close</i>
+                      </a>  
+                    </div>
+                 </li>`;
+
+            $('.wishlist').append(output);
+            
+            Materialize.toast('Wishing list added', 3000);
+             e.preventDefault();
+       });
+  
+    // Delete quick-wish-list
+    $('.wishlist').on('click',  '.delete',function(){
+        $(this).parent().parent().remove()
+        Materialize.toast('Wishing list removed', 3000);
+        
+        e.preventDefault();
+      
+    });
+    });
+   });
 
 </script>    
 </body>
