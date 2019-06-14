@@ -81,8 +81,8 @@
 <section class="section section-stats center">
 <div class="row">
   <div class="col s12 m6 l6">  
-   <div class="card-panel blue lighten-1 white-text center">
-     <i class="material-icons">access_time</i>
+   <div class="card-panel pink lighten-1 white-text center">
+     <i class="material-icons large">access_time</i>
       <h4>Mothly reading minutes</h4>
       <h2 class="cout">280</h2>
       <div class="progress grey lighten-1">
@@ -93,7 +93,7 @@
 
 <div class="col s12 m6 l6">  
         <div class="card-panel blue lighten-1 white-text center">
-          <i class="material-icons">import_contacts</i>
+          <i class="material-icons large">import_contacts</i>
            <h4>Books total</h4>
            <h2 class="cout">6</h2>
            <div class="progress grey lighten-1">
@@ -128,10 +128,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
     $(document).ready(function(){
-        $('.sidenav').sidenav();
-        $('.parallax').parallax();
+        // modal for logout
         $('.modal').modal();
-    })
+    
+        // couter
+        $('.count').each(function(){
+            $(this).prop('counter', 0).animate({
+                counter: $(this).text()
+            },{
+          duration:1000,
+          easing: 'swing',
+          step:function (now){
+            $(this).text(math.ceil(now));
+          }
+       });
+    });
+  });
 </script>    
 </body>
 </html>
