@@ -18,13 +18,13 @@
     <header>
     <nav class="nav-wrapper transparent">
          <div class="container">
-            <a href="public/home.html" class="brand-logo blue-text">Home</a>
+            <a href="public/home.html" class="brand-logo blue-text"></a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons blue-text">menu</i>
             </a>
         <ul class="right hide-on-med-and-down">
-            
             <li ><a href="./chart.html" class="modal-trigger blue-text">Dashboard</a></li>
+            <li  class="active" ><a href="./library.html" class="modal-trigger blue-text">Library</a></li>
             <li><a href="./home.html" class="modal-trigger blue-text">Logout</a></li>
 
         </ul>
@@ -34,77 +34,239 @@
     </ul>
    </div>
 </nav>
-
-<div class="container center"></div>
- 
-
-   <div class="modal" id="login">
-     <h5 class="modal-close">&#10005;</h5>
-    
-    <div class="modal-content center">
-            <h4 class="blue-text">Login Form</h4><br>
-        <form action="#">
-       
-        <div class="input-field">
-           <i class="material-icons prefix">person</i>
-           <input type="text" id="username">
-           <label for="username">Username</label>
-        </div><br>
-
-        <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input type="password" id="password">
-                <label for="password">Password</label>
-             </div><br>
-
-         <div class="left">
-                <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
-                        <span>Remember me</span>
-                      </label>
-             </div><br>     
-
-             <input a href="public/chart.html" type=" submit" value="login" class="btn-large">
-
-
-        </form>
-    </div>
-</div>
 </header>
 
-<section class="section sectionLibrary grey lighten-4">
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-title">Books</span>
-                    <table class="striped">
-                        <thead>
-                            <tr>
-                              <th>Titel</th>
-                              <th>Writer</th>
-                              <th>Review</th>
-                              <td>
-                                <a href="library.html" class="btn blue">Edit</a>
-                             </td>
+<!-- Book list table with modal Please connect with DB -->
+
+<section class="section section-voice grey lighten-4">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <div class="card-content">
+                <div class="card-title">
+                   <table class="striped">
+                       <thead>   
+                         <tr>
+                           <th>Id</th>
+                           <th>Date created</th>
+                           <th>Title</th>
+                           <th>Writer</th>
+                           <th></th>
+                         </tr>
+                         </thead>  
+                         <tbody>
+                         <tr>
+                            <td>id</td>
+                             <td>date</td>
+                             <td>title</td>
+                             <td>writer</td>
                              <td>
-                                <a href="library.html" class="btn red">Delete</a>
-                            </td>
-
-                            </tr>
-                        </thead>
-                    </table>
-
-                    </div>
+                              <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                             </td>
+                             <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                <i class="material-icons">edit</i>
+                            </a>
+                                <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                    <i class="material-icons">close</i>
+                                </a>
+                                </td> 
+                         </tr>
+                          <tr>
+                            <td>id</td>
+                             <td>date</td>
+                             <td>title</td>
+                             <td>writer</td>
+                             <td>
+                              <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                             </td>
+                             <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                <i class="material-icons">edit</i>
+                            </a>
+                                <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                    <i class="material-icons">close</i>
+                                </a>
+                                </td> 
+                         </tr>
+                          <tr>
+                             <td>id</td>
+                             <td>date</td>
+                             <td>title</td>
+                             <td>writer</td>
+                             <td>
+                              <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                             </td>
+                             <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                <i class="material-icons">edit</i>
+                            </a>
+                                <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                    <i class="material-icons">close</i>
+                                </a>
+                                </td> 
+                             </tr>
+                             <tr>
+                                <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                               <tr>
+                                 <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                               <tr>
+                                <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                               <tr>
+                                <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                               <tr>
+                                <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                               <tr>
+                                <td>id</td>
+                                <td>date</td>
+                                <td>title</td>
+                                <td>writer</td>
+                                <td>
+                                 <a href="#book-modal" class="btn blue right btn-small modal-trigger right">details</a>
+                                </td>
+                                <td><a href="#edit-modal" class="secondary-content green delete btn-small red modal-trigger right">
+                                   <i class="material-icons">edit</i>
+                               </a>
+                                   <td><a href="#!" class="secondary-content delete btn-small red modal-trigger right">
+                                       <i class="material-icons">close</i>
+                                   </a>
+                                   </td> 
+                               </tr>
+                         </tbody>
+                     </table>
+                  </div>
                 </div>
             </div>
+         </div>
+         </div>
+      </div>
+     </div>
+   </div>
+ </section>
+       
+
+
+<!-- Edit modal please connect with DB-->
+
+<div id="edit-modal" class="modal">
+    <div class="modal-content"> 
+        <h4>Edit Post</h4>
+        <form>
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                 <input type="text" id="writer">
+                <label for="Writer">Title</label>
+            </div>
+            <div class="input-field">
+                    <textarea name="body" cols="30" rows="10" class="materialize-textarea">
+                        Review</textarea>
+                 <label for="body"></label>
+               </div>
+        </form>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close btn blue white-text">submit</a>
         </div>
     </div>
 </div>
-</section>
 
- 
+
+<!-- Individual book information Please connect with DB -->
+
+ <div id="book-modal" class="modal">
+    <div class="modal-content">  
+        <h4>Your Book</h4>
+        <form>
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                 <input type="text" id="writer">
+                <label for="writer">Writer</label>
+            </div>
+            <div class="input-field">
+                    <textarea name="body" cols="30" rows="10" class="materialize-textarea"></textarea>
+                    <label for="review">Review</label>
+                 <!-- <label for="body"></label> -->
+               </div>
+        </form>
+        <div class="modal-footer">
+            <a href="./public/library.html" class="modal-action modal-close btn blue white-text">back</a>
+        </div>
+    </div>
+</div>
+
+
 
  <!-- footer -->
  <footer class="section blue darken-s white-text center">
@@ -114,7 +276,7 @@
  <!-- Compiled and minified JavaScript -->     
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script src="./js/chart.js"></script>  
 <script>
    
@@ -133,11 +295,17 @@
         // modal for logout 
         $('.modal').modal();
 
+        // Init select
+        $('select').materialize_select();
+
         // side nav
         $('.sidenav').sidenav();
 
         });    
- });
+        
+        CKEDITOR.replace( 'body' );
+ 
+    });
 </script>    
 </body>
 </html>
