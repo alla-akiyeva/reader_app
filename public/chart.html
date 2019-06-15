@@ -228,7 +228,7 @@
                 <label for="Writer">Title</label>
             </div>
             <div class="input-field">
-                    <textarea name="body" cols="30" rows="10" class="materialize-textarea"></textarea>
+                    <textarea name="body" cols="30" rows="20" class="materialize-textarea"></textarea>
                  <label for="body">review</label>
                </div>
         </form>
@@ -287,7 +287,7 @@
             $(this).prop('counter', 0).animate({
                 counter: $(this).text()
             },{
-          duration:1000,
+          duration:6000,
           easing: 'swing',
           step:function (now){
             $(this).text(Math.ceil(now));
@@ -296,6 +296,7 @@
     });
 //   Quick wish list
    $('#wish-form').submit(function(e){
+    e.preventDefault();
    const output = ` <li class="collection-item">
                      <div>${$('#wishlist').val()}
                         <a href="#!" class="secondary-content delete">
@@ -308,7 +309,7 @@
             
     Materialize.toast('Wishing list added', 3000);
     
-    e.preventDefault();
+  
   }); 
   
     // Delete quick-wish-list
