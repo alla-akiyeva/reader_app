@@ -30,64 +30,26 @@
     <header>
     <nav class="nav-wrapper transparent">
          <div class="container">
-            <a href="public/home.html" class="brand-logo blue-text">Home</a>
+            <a href="./home.html" class="brand-logo blue-text"></a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons blue-text">menu</i>
             </a>
         <ul class="right hide-on-med-and-down">
             
-            <li ><a href="public/chart.html" class="modal-trigger blue-text">Dashboard</a></li>
-            <li><a href="public/library.html" class="modal-trigger blue-text">Library</a></li>
-            <li><a href="public/category.html" class="modal-trigger blue-text">Category</a></li>
-            <li><a href="public/user.html" class="modal-trigger blue-text">User</a></li>
+            <li class="active" ><a href="./chart.html" class="modal-trigger blue-text">Dashboard</a></li>
+            <li><a href="./library.html" class="modal-trigger blue-text">Library</a></li>
             <li><a href="./home.html" class="modal-trigger blue-text">Logout</a></li>
 
         </ul>
         <ul class="sidenav " id="mobile-links">
-            <li ><a href="public/home.html" class="blue-text">Home</a></li>
+            <li ><a href="./home.html" class="blue-text">Home</a></li>
             <li ><a href="#login" class= "modal-trigger blue-text">Login</a></li>
     </ul>
    </div>
 </nav>
-
-<div class="container center"></div>
- 
-
-   <div class="modal" id="login">
-     <h5 class="modal-close">&#10005;</h5>
-    
-    <div class="modal-content center">
-            <h4 class="blue-text">Login Form</h4><br>
-        <form action="#">
-       
-        <div class="input-field">
-           <i class="material-icons prefix">person</i>
-           <input type="text" id="username">
-           <label for="username">Username</label>
-        </div><br>
-
-        <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input type="password" id="password">
-                <label for="password">Password</label>
-             </div><br>
-
-         <div class="left">
-                <label>
-                        <input type="checkbox" class="filled-in" checked="checked" />
-                        <span>Remember me</span>
-                      </label>
-             </div><br>     
-
-             <input a href="public/chart.html" type=" submit" value="login" class="btn-large">
-
-
-        </form>
-    </div>
-</div>
 </header>
 
- <!-- section: Reading minutes charts -->
+ <!-- section: Reading minutes charts please connect with DB-->
 
    <section class="section section-visitors blue lighten-4">
   <div class="row">
@@ -100,7 +62,7 @@
   </div>
 </section>
 
-<!-- section: Reading min with icon -->
+<!-- section: Monthly Reading min  please connect with DB-->
 <section class="section section-stats center">
         <div class="row">
           <div class="col s12 m6 l6">  
@@ -114,7 +76,7 @@
           </div>
         </div>   
         
-        <!-- section: Books has read with icon -->
+        <!-- section: Books has read total  please connect with DB-->
         <div class="col s12 m6 l6">  
                 <div class="card-panel blue lighten-1 white-text center">
                   <i class="material-icons large">import_contacts</i>
@@ -127,7 +89,7 @@
              </div>   
           </section>
         
-<!-- recently added books -->
+<!-- recently added books please connect with DB-->
 
 <section class="section section-library">
     <div class="row">
@@ -174,7 +136,10 @@
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l4">
+
+        <!-- Quick wish book list I guess we don't need to connect with DB-->
+
+            <div class="col s12 m6 l4">
                 <div class="card">
                   <div class="card-content">
                      <span class="card-title">Quick wish list</span>
@@ -198,53 +163,12 @@
                                   </a>
                                   </div>
                               </li>
-                       
                          </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-  <!-- Add Upload Modal -->
-
-<div id="post-modal" class="modal">
-   <div class="modal-content">
-     <h4>Edit your review</h4>
-       <form>
-        <div class="input-field">
-        <input type="text" id="title">
-        <label for="title">title</label>
-       </div>
-      </form>
-   </div>
-</div>
-
-
- <!-- fixed action button -->
-
- <div class="fixed-action-btn">
-     <a class="btn-floating btn-large red">
-        <i class="material-icons">add</i>
-    </a>
-     <ul>
-      <li>
-        <a href="#edit-modal" class="modal-trigger btn-floating blue">
-          <i class="materil-icons">mode_edit</i>
-        </a>
-          </li>
-          <li>
-              <a href="#post-modal" class="modal-trigger btn-floating blue">
-                      <i class="materil-icons">folder</i>
-              </a>
-          </li>
-  
-        </ul>
-    </div>
-  
-
-
-
 
  <!-- footer -->
  <footer class="section blue darken-s white-text center">
@@ -255,71 +179,67 @@
 <!-- fixed action button -->
 
      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red">
+        <a class="btn-floating btn-large red waves-effect">
            <i class="material-icons">add</i>
         </a>
         <ul>
           <li>
-             <a href="library.html" class="modal-trigger btn-floating blue">
-             <i class="materil-icons">mode_edit</i>
+             <a href="#find-your-book" class="modal-trigger btn-floating btn-large pink waves-effect">
+              <i class="material-icons large">search</i>
              </a>
              </li>
              <li>
-              <a href="#post-modal" class="modal-trigger btn-floating blue">
-             <i class="materil-icons">folder</i>
-            </a>
-             </li>
-             <li>
-             <a href="#category-modal" class="modal-trigger btn-floating blue">
-            <i class="materil-icons">mode_edit</i>
-            </a>
-            </li>  
-            <li>
-              <a href="#edit-modal" class="modal-trigger btn-floating blue">
-                <i class="materil-icons">mode_edit</i>
+               <!-- voice recognition -->
+              <a href="#voice-modal" class="modal-trigger btn-floating  btn-large green waves-effect">
+                <i class="material-icons large">mic_none</i>
                 </a>
             </li>       
           </ul>
      </div>
      
-    <!-- Add post modal -->
-<div id="post-modal" class="modal">
-<div class="modal-content">
-    <h4>Add Book</h4>
-   <form>
-       <div class="imput-field">
-           <input type="text" id="title">
-           <label for="title">Title</label>
-       </div>
-       <div class="imput-field">
-            <input type="text" id="writer">
-            <label for="title">Writer</label>
-        </div>
-        <div class="imput-field">
-                <input type="text" id="review">
-                <label for="title">Review</label>
-        </div>
-         
+<!-- Edit your review Modal -->
 
-
-
-
-
-   </form>
-</div>
+<div id="find-your-book" class="modal">
+  <div class="modal-content">
+    <h4>Find your book</h4>
+      <form>
+       <div class="input-field">
+       <input type="text" id="title">
+       <label for="title">title</label>
+       <a href="#" class=" btn btn-small green">
+        <i class="materil-icons">serch</i>
+        </a>
+      </div>
+     </form>
+  </div>
 </div>
 
-   
-   
-   
-   
+<!-- voice recognition modal -->
+<div id="voice-modal" class="modal">
+    <div class="modal-content"> 
+        <h4>Talk to me what you read out loud!</h4>
+        <form>
+            <div class="input-field">
+                <input type="text" id="title">
+                <label for="title">Title</label>
+            </div>
+            <div class="input-field">
+                 <input type="text" id="writer">
+                <label for="Writer">Title</label>
+            </div>
+            <div class="input-field">
+                    <textarea name="body" cols="30" rows="10" class="materialize-textarea"></textarea>
+                 <label for="body">review</label>
+               </div>
+        </form>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close btn blue white-text">submit</a>
+        </div>
+    </div>
+</div>
 
 
-  
-  
-  
-  
-    <!-- Preloader -->
+   <!-- Preloader -->
 
   <div class="loader preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
@@ -333,23 +253,6 @@
         </div>
       </div>
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
 <!-- Compiled and minified JavaScript -->     
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -365,18 +268,21 @@
         $(document).ready(function(){
         // show sections
         $('.section').fadeIn(2500);
-
+      });
         // Hide preloader
         $('.loader').fadeOut();
         
-        // modal for logout 
+        // floating action button
+        $('.fixed-action-btn').floatingActionButton();
+
+
+       // init modal 
         $('.modal').modal();
 
         // side nav
         $('.sidenav').sidenav();
 
-
-       // couter effect animation
+        // couter effect animation
         $('.count').each(function(){
             $(this).prop('counter', 0).animate({
                 counter: $(this).text()
@@ -401,20 +307,20 @@
     $('.wishlist').append(output);
             
     Materialize.toast('Wishing list added', 3000);
+    
     e.preventDefault();
-      
+  }); 
   
     // Delete quick-wish-list
-    $('.wishlist').on('click',  '.delete',function(){
+    $('.wishlist').on('click',  '.delete',function(e){
         $(this).parent().parent().remove()
         Materialize.toast('Wishing list removed', 3000);
         
         e.preventDefault();
-      
-     });
     });
-   });
+       CKEDITOR.replace( 'body');
  });
+ 
 </script>    
 </body>
 </html>
