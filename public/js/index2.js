@@ -1,5 +1,5 @@
 var recognizing;
-
+ // comment abhi alla kiha
     var recognition = new webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
