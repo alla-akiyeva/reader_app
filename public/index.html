@@ -9,34 +9,64 @@
 
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
+  <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Reader App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Library</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        </ul>
+        <!--<form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log Out</button>
+        <!--</form>-->
+    </div>
+</nav>
 
-  <div class="container">
+<!--Jumbotron banner-->
+  <div class="container" id="main-container">
     <div class="jumbotron">
       <h1>The Reader</h1>
       <h5>The Reader is your personal book catalog that simplifies your search database of books, note-taking, and track
         progress</h5>
-      <hr>
-      <a href="/all" class="btn btn-danger btn-lg">
+      <!-- <hr> -->
+      <!-- <a href="/all" class="btn btn-danger btn-lg">
         <span class="fa fa-th-list"></span> Library</a>
       <a href="/add" class="btn btn-danger btn-lg">
-        <span class="fa fa-plus"></span> Dashboard</a>
-      
+        <span class="fa fa-plus"></span> Dashboard</a> -->
+
     </div>
+
+    <!--Search div-->
     <div class="row">
 
       <div class="col-lg-12">
+        <form class="form-inline">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="book-search">
+          <button class="btn btn-dark" type="submit" id="search-btn">Search</button>
+          <button class="btn btn-dark" type="submit" id="clear">Clear</button>
+        </form>
 
-        <div class="card mb-4">
+        <!-- <div class="card mb-4">
           <div class="card-header">
             Book Search
           </div>
           <div class="card-body">
-            <input type="text" id="character-search" class="form-control">
+            <input type="text" id="book-search" class="form-control">
             <br>
             <div class="text-right">
               <button type="submit" class="btn btn-primary btn-md" id="search-btn">
@@ -46,33 +76,59 @@
 
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
+
+    <!--CARDs start here-->
     <div class="row">
-
       <div class="col-lg-12">
-
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
             Search Results
-          </div>
+          </div> -->
           <div class="card-body" id="body-section">
             <!-- Content will go in here -->
-            <div class="card-deck" style="height: 80px;">
 
+            <!--Card Deck-->
+            <div class="card-deck">
+              <div class="container" id="card-container">
+                  <div id="cards">
+                <!--First Card-->
+                <!-- <div class="card mb-3">
+                  <div class="row no-gutters">
+                    <div class="col-md-3">
+                      <img src="./css/img/hp.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                          additional content. This content is a little bit longer.</p>
+                        <div class="btn-group" role="group" aria-label="button group">
+                          <button type="button" class="btn btn-secondary">Details</button>
+                          <button type="button" class="btn btn-secondary">Update</button>
+                          <button type="button" class="btn btn-secondary">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        
+        <!--END of Card Deck-->
       </div>
     </div>
   </div>
- <!-- jQuery JS -->
- <script src="https://code.jquery.com/jquery.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
- <!-- Code to the JavaScript File -->
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
   <script src="js/index.js" type="text/javascript"></script>
-  
+
 
 </body>
 ​
