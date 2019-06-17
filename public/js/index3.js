@@ -10,7 +10,7 @@ function buildQueryURL() {
     var queryParams = {};
 
     // Grab text the user typed into the search input, add to the queryParams object
-    queryParams.q = $("#book-search")
+    queryParams.q = $("#character-search")
         .val()
         .trim();
 
@@ -25,59 +25,35 @@ function buildQueryURL() {
 
 /**
 * takes API data (JSON/object) and turns it into elements on the page
-* @param {object} BookData - object containing API data
+* @param {object} BookData - object containing NYT API data
 */
-
-var container = $("#card-container");
 
 function updateCards(BookData) {
     for (var i = 0; i < 5; i++) {
-    var books = BookData.items[i]
-    var bookName = books.volumeInfo.title
-    var bookImage = books.volumeInfo.imageLinks.thumbnail
-    var description = books.volumeInfo.description
-    var author = books.volumeInfo.authors[0];
 
-    var card = $("<div>").attr('class', 'card');
-    var colm1 = $("<div>").attr("class", "col-md-3");
-    var colm2 = $("<div>").attr("class", "col-md-8");
-    var row = $("<div>").attr("class", "row");
-    var img = $("<img>").attr("src", bookImage);
-    var h5 = $("<h5>").text(bookName);
-    var btn = $("<button>").attr("class", 'btn btn-success');
-    btn.text("Add to Library");
+        var books = BookData.items[i]
+        var bookName = books.volumeInfo.title
+        // var author = dataForSingleItem.blog_text
+        var bookImage = books.volumeInfo.imageLinks.thumbnail
+        var description = books.volumeInfo.description
 
-    var h6 = $("<h6>").text(author)
+        $(".card-deck").append(
+            '<div class="card" style="width: 123px;">',
+            '<img class="card-img-top" src="' + bookImage + '" alt="Card image cap">',
+            '<div class="card-body">',
+            '<h5 class="card-title">' + bookName + '</h5>',
+            '<p class="card-text">' + description + '</p>',
+            '</div>'
+        );
 
-    var p = $("<p>").text(description);
-    console.log(bookName, author);
-    //var img = $("<img>");
-    //img.attr("src", bookImage);
-    container.append(card)
-    card.append(row);
-    row.append(colm1);
-    row.append(colm2);
-    colm1.append(img);
-    colm2.append(h5);
-    colm2.append(h6);
-    colm2.append(p);
-    colm2.append(btn);
-    // container.append(h4);
-    // container.append(p);
-    // container.append(img);
-   
-
-    
-
- }
+    }
 }
-
 
 // Function to empty out the articles
 function clear() {
     // $("#body-section").empty();
     location.reload(true);
-
+   
 }
 
 
@@ -92,7 +68,7 @@ $("#search-btn").on("click", function (event) {
     event.preventDefault();
 
     // Empty the region associated with the articles
-    // clear();
+// clear();
 
 
     // Build the query URL for the ajax request to the NYT API
