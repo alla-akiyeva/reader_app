@@ -1,0 +1,28 @@
+body {
+    background-color: #263238;
+
+}
+
+.container {
+    width: 80%;
+}
+
+.jumbotron {
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#body {
+    margin-bottom: 10px;
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.btn-group {
+    float: right;
+    padding: 10px 0 10px;
+}
+
