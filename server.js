@@ -4,10 +4,14 @@
 // =============================================================
 var express = require("express");
 
+// var exphbs = require('express-handlebars');
+// const {Book} = require('./models');
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+
+// app.use(express.static(__dirname + '/public'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
