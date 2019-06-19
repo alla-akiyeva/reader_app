@@ -1,7 +1,14 @@
-module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
-  });
-  return Example;
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const Book = sequelize.define('Book', {
+    title: DataTypes.STRING,
+    author: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    image: DataTypes.STRING
+  }, {});
+  Book.associate = function(models) {
+    // associations can be defined here
+    Book.hasMany(models.Comment);
+  };
+  return Book;
 };

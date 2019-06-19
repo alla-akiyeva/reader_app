@@ -11,6 +11,7 @@ body {
     padding: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 #body {
@@ -19,4 +20,31 @@ body {
 
 .card {
     margin-bottom: 5px;
+    background-color: #E9ECEF;
 }
+
+.btn-group {
+    float: right;
+    padding: 10px 0 10px;
+}
+
+#main-card p {
+    max-height: 130px;
+    overflow: scroll;
+}
+
+#main-card {
+    border: 0;
+    background-color: white;
+}
+
+
+
+@media (min-width: 576px) {
+    #main-card p {
+        margin-bottom: 15px;
+    }
+}
+
+
+
