@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>The Reader | Update</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <!-- Font Awesome CSS Icons (For cool glyphicons) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/update.css">
@@ -13,19 +14,20 @@
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Reader App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">The Reader</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Library</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/library">Library</a>
+                </li>
             </ul>
             <!--<form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
@@ -39,63 +41,46 @@
 
         <!--Jumbotron-->
         <div class="jumbotron">
-            <h4>Harry Potter and the Prisoner of Azkaban</h5>
-            <h6>J.K. Rowling</h6>
-            <p>Added to Library on June 17, 2019</p>
-            <!-- <hr> -->
-            <!-- <a href="/all" class="btn btn-danger btn-lg">
-            <span class="fa fa-th-list"></span> Library</a>
-            <a href="/add" class="btn btn-danger btn-lg">
-            <span class="fa fa-plus"></span> Dashboard</a> -->
+
         </div>
 
 
         <!--New comment input field-->
-         <div class="row">
-			<div class="col-md-12"> <!--offset-md-3"-->
-				<form id="cms">
-					<div class="form-group">
-						<!-- <label for="body">Body:</label> -->
-						<textarea placeholder="Add a comment" class="form-control" rows="5" id="body"></textarea>
-                        <button type="submit" class="btn btn-success submit" id="submit-btn">Submit</button>
-                        <button type="submit" class="btn btn-success submit" id="cancel-btn">Cancel</button>
-					</div>
-				</form>
-			</div>
-		</div>
-    
-    
-
-        <!--Old comments-->
-        <div class="card">
-            <!-- <h5 class="card-header">Featured</h5> -->
-            <div class="card-body">
-                <h5 class="card-title">June 15, 2019</h5>
-                <p class="card-text">It's taken me a while to finish this book. I've been busy but just got back to reading. Will finish it soon. Hermione is my favorite character.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <div class="row">
+            <div class="col-md-12">
+                <!--offset-md-3"-->
+                <form id="cms">
+                    <div class="form-group">
+                        <!-- <label for="body">Body:</label> -->
+                        <textarea placeholder="Add a comment" class="form-control" rows="5" id="textarea"></textarea>
+                        <div class="btn-group" role="group" aria-label="button group">
+                            <button type="button" class="btn btn-outline-light" id="button"
+                                onclick="toggleStartStop()">Record</button>
+                            <button type="button" class="btn btn-outline-light" id="updatebtn">Update</button>
+                            <button type="button" class="btn btn-outline-light" id="deletebtn">Clear</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="card">
-            <!-- <h5 class="card-header">Featured</h5> -->
-            <div class="card-body">
-                <h5 class="card-title">May 8, 2019</h5>
-                <p class="card-text">On Chapter 2 and loving it so far.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+        <!--Comments-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-body" id="body-section">
+                    <!-- Content will go in here -->
+
+                </div>
             </div>
         </div>
-
-        <div class="card">
-            <!-- <h5 class="card-header">Featured</h5> -->
-            <div class="card-body">
-                <h5 class="card-title">May6, 2019</h5>
-                <p class="card-text">Just started reading this book. Super excited, I think I'll find it very interesting.</p>
-                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-        </div>
-
     </div>
-   
 
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/update.js" type="text/javascript"></script>
 </body>
+
 </html>

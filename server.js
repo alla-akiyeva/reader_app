@@ -5,7 +5,8 @@
 var express = require("express");
 
 // var exphbs = require('express-handlebars');
-// const {Book} = require('./models');
+const Book = require('./models').Book;
+const Comment = require('./models').Comment;
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -17,14 +18,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory to be served
-app.use(express.static("app/public"));
+app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
-require("./app/routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================

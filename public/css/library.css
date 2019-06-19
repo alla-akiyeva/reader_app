@@ -1,0 +1,79 @@
+body {
+    background-color: #263238
+}
+
+#card-container {
+    width: 80%;
+}
+
+.card.mb-3 {
+    margin: auto;
+    max-width: 898px;
+    max-height: 200px;
+    padding: 5px;
+}
+
+.card {
+  padding: 10px;
+  margin: 10px 0 10px;
+}
+
+h6 {
+    color: #aaa;
+}
+
+.card p {
+    max-height: 90px;
+    overflow: scroll;
+}
+
+img {
+    max-height: 195px;
+    padding-bottom: 5px;
+}
+
+.jumbotron {
+    padding: 30px;
+    margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+    .form-inline .form-control {
+        display: inline-block;
+        width: 80%;
+        vertical-align: middle;
+    } 
+}
+
+.form-inline {
+    margin-bottom: 30px;
+}
+
+.btn.btn-dark {
+    width: 9%;
+    margin-left: 1%;
+}
+
+@media (min-width: 576px) {
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+}
+
+
+/* .has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+
+} */
