@@ -1,12 +1,13 @@
 {
   "development": {
-    "username": "root",
-    "password": "docker",
-    "port": 3307,
-    "database": "reader",
-    "host": "127.0.0.1",
+    "username": "b96991e62ce31e",
+    "password": "482da86c",
+    "port": 3306,
+    "database": "heroku_f59191689cb4eb3",
+    "host": "us-cdbr-iron-east-02.cleardb.net",
     "dialect": "mysql",
     "operatorsAliases": false
+
   },
   "test": {
     "username": "root",
