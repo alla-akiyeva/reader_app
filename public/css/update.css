@@ -30,8 +30,9 @@ body {
 }
 
 #main-card p {
-    max-height: 130px;
+    max-height: 140px;
     overflow: scroll;
+    max-width: 720px;
 }
 
 #main-card {
@@ -45,7 +46,16 @@ body {
     font-style: italic;
 }
 
+.jumbotron {
+    padding: 20px;
+    margin-top: 32px;
+    
 
+}
+
+.form-group {
+    margin-top: 20px;
+}
 @media (min-width: 576px) {
     #main-card p {
         margin-bottom: 15px;
