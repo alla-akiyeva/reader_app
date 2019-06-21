@@ -92,10 +92,12 @@ $("#updatebtn").click(function () {
   var card = $("<div>").attr("class", "card")
   var cardbody = $("<div>").attr("class", "card-body")
   var p = $("<p>").attr("class", "card-text").text(comment)
+  var span = $("<span>").attr("class", "small-text").text(moment((comments.createdAt)).format('MMMM Do YYYY, h:mm:ss a'))
 
   container.append(card)
   card.append(cardbody)
   cardbody.append(p)
+  cardbody.append(span)
 
   var newComment = {
     comment: comment,
