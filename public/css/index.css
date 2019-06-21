@@ -1,5 +1,6 @@
 body {
-    background-color: #263238
+    background-color: #263238;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main-container {
@@ -34,6 +35,7 @@ img {
 .jumbotron {
     padding: 30px;
     margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (min-width: 576px) {

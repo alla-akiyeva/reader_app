@@ -1,5 +1,6 @@
 body {
-    background-color: #263238
+    background-color: #263238;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #card-container {
