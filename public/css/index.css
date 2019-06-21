@@ -34,8 +34,9 @@ img {
 
 .jumbotron {
     padding: 30px;
-    margin-top: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 32px;
+    
+
 }
 
 @media (min-width: 576px) {
