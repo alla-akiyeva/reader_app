@@ -39,6 +39,11 @@ body {
     background-color: white;
 }
 
+.small-text {
+    font-size: 12px;
+    font-weight: lighter;
+    font-style: italic;
+}
 
 
 @media (min-width: 576px) {

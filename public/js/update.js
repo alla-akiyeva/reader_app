@@ -11,12 +11,12 @@ bookId = url.split("=")[1];
 function bookInfo() {
 
   bookId = url.split("=")[1];
-  console.log(bookId + ":second console")
+
 
   $.get("/api/books/" + bookId).then(function (data) {
-    console.log("/api/books/" + bookId);
+   
     for (var i = 0; i < 1; i++) {
-      console.log(data)
+      
       var card = $("<div>").attr('id', 'main-card').addClass("card");
       var colm1 = $("<div>").attr("class", "col-md-2");
       var colm2 = $("<div>").attr("class", "col-md-9");
@@ -67,7 +67,7 @@ function reset() {
 }
 
 function toggleStartStop() {
-  console.log("this is working")
+  
   event.preventDefault();
   if (recognizing) {
     recognition.stop();
@@ -92,10 +92,12 @@ $("#updatebtn").click(function () {
   var card = $("<div>").attr("class", "card")
   var cardbody = $("<div>").attr("class", "card-body")
   var p = $("<p>").attr("class", "card-text").text(comment)
+  var span = $("<span>").attr("class", "small-text").text(moment((comments.createdAt)).format('MMMM Do YYYY, h:mm:ss a'))
 
   container.append(card)
   card.append(cardbody)
   cardbody.append(p)
+  cardbody.append(span)
 
   var newComment = {
     comment: comment,
@@ -150,10 +152,14 @@ function initializeRows() {
   commentsContainer.empty();
   var commentsToAdd = [];
   for (var i = 0; i < comments.length; i++) {
-    commentsToAdd.push(createNewRow(comments[i].comment));
+    commentsToAdd.push(createNewRow(comments[i]));
+    // commentsToAdd.push(createNewRow(comments[i]));
     console.log((comments[i]).comment)
+    console.log(moment((comments[i].createdAt)).format('MMMM Do YYYY, h:mm:ss a'))
   }
   commentsContainer.append((comments[i]));
+
+  ;
 
 
 }
@@ -163,10 +169,12 @@ function createNewRow(comments) {
   var container = $(".container")
   var card = $("<div>").attr("class", "card")
   var cardbody = $("<div>").attr("class", "card-body")
-  var p = $("<p>").attr("class", "card-text").text(comments)
+  var p = $("<p>").attr("class", "card-text").text(comments.comment)
+  var span = $("<span>").attr("class", "small-text").text(moment((comments.createdAt)).format('MMMM Do YYYY, h:mm:ss a'))
   container.append(card)
   card.append(cardbody)
   cardbody.append(p)
+  cardbody.append(span)
 }
 
 
