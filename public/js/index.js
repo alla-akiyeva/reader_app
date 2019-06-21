@@ -146,7 +146,7 @@ $(document).ready(function () {
 });
 
 
-//  .on("click") function associated with the clear button
+//.on("click") function associated with the clear button
 $("#clear").on("click", clear);
 
 
