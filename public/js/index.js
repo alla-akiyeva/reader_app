@@ -65,9 +65,9 @@ $(document).ready(function () {
                 if (books.volumeInfo.authors) {
                     author = books.volumeInfo.authors[0];
                 }
-                // const altAuthor = books.volumeInfo.authors ? books.volumeInfo.authors[0] : "Unknown Author";
+                const bookImage = books.volumeInfo.imageLinks ? books.volumeInfo.imageLinks.thumbnail : "https://images.freeimages.com/images/large-previews/aca/book-1193740.jpg";
 
-                const bookImage = books.volumeInfo.imageLinks.thumbnail
+                // const bookImage = books.volumeInfo.imageLinks.thumbnail
                 const description = books.volumeInfo.description
 
 
