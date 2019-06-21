@@ -4,10 +4,10 @@
  */
 function buildQueryURL() {
     // queryURL is the url we'll use to query the API
-    var queryURL = "https://www.googleapis.com/books/v1/volumes?";
+    const queryURL = "https://www.googleapis.com/books/v1/volumes?";
 
     // Begin building an object to contain our API call's query parameters
-    var queryParams = {};
+    const queryParams = {};
 
     // Grab text the user typed into the search input, add to the queryParams object
     queryParams.q = $("#book-search")
@@ -28,7 +28,7 @@ function buildQueryURL() {
 * @param {object} BookData - object containing API data
 */
 
-var container = $("#card-container");
+const container = $("#card-container");
 
 
 
@@ -45,53 +45,57 @@ $(document).ready(function () {
     // ==========================================================
 
     $("#search-btn").on("click", function (event) {
-       
+
         event.preventDefault();
 
         // Build the query URL for the ajax request 
-        var queryURL = buildQueryURL();
+        const queryURL = buildQueryURL();
 
         // Make the AJAX request to the API - GETs the JSON data at the queryURL.
-     
+
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            var results = response;
-            for (var i = 0; i < 10; i++) {
-                var books = response.items[i]
-                var bookName = books.volumeInfo.title;
-                var author = books.volumeInfo.authors[0];
-                var bookImage = books.volumeInfo.imageLinks.thumbnail
-                var description = books.volumeInfo.description
+            const results = response;
+            for (let i = 0; i < 10; i++) {
+                const books = response.items[i]
+                const bookName = books.volumeInfo.title;
+                let author = "Unknown";
+                if (books.volumeInfo.authors) {
+                    author = books.volumeInfo.authors[0];
+                }
+                // const altAuthor = books.volumeInfo.authors ? books.volumeInfo.authors[0] : "Unknown Author";
+
+                const bookImage = books.volumeInfo.imageLinks.thumbnail
+                const description = books.volumeInfo.description
 
 
-                var card = $("<div>").attr('class', 'card');
+                const card = $("<div>").attr('class', 'card');
                 card.attr("id", "card" + i);
 
-                var colm1 = $("<div>").attr("class", "col-md-3");
-                var colm2 = $("<div>").attr("class", "col-md-8");
-                var row = $("<div>").attr("class", "row");
+                const colm1 = $("<div>").attr("class", "col-md-3");
+                const colm2 = $("<div>").attr("class", "col-md-8");
+                const row = $("<div>").attr("class", "row");
 
-                var img = $("<img>").attr("data-id", [i]).attr("src", bookImage);
-                // var h5 = $("<h5>").attr("data-id", [i]).text(bookName);
-                //var btn = $("<button>").attr("value",[i])
-                var btn = $("<button>").attr("data-id", [i]).addClass("btn btn-success");
+                const img = $("<img>").attr("data-id", [i]).attr("src", bookImage);
+
+                const btn = $("<button>").attr("data-id", [i]).addClass("btn btn-success");
                 // .attr("class", 'btn btn-success');
                 btn.text("Add to Library");
 
-                var h6 = $("<h6>").attr("data-id", [i]).text(author)
+                const h6 = $("<h6>").attr("data-id", [i]).text(author)
 
-                var p = $("<p>").attr("data-id", [i]).text(description);
+                let p = $("<p>").attr("data-id", [i]).text(description);
 
 
 
-                var h5 = $("<h5>").text(bookName);
+                const h5 = $("<h5>").text(bookName);
                 h5.attr("id", "title" + i);
 
 
-                var p = $("<p>").text(description);
-    
+                // let p = $("<p>").text(description);
+
                 container.append(card)
                 card.append(row);
                 row.append(colm1);
@@ -106,32 +110,32 @@ $(document).ready(function () {
 
             $("#card-container").on("click", ".btn.btn-success", function selectBook(response) {
 
-                var index = $(this).attr("data-id");
+                const index = $(this).attr("data-id");
                 $(this).replaceWith("<span style=‘color:green; font-weight:bold’>Added to Library ✓</span>");
                 console.log(index);
 
-    
 
-                var selectedBook = results.items[index];
-                
 
-                var newBook = {
-               
+                const selectedBook = results.items[index];
+
+
+                const newBook = {
+
                     title: selectedBook.volumeInfo.title,
-             
+
                     author: selectedBook.volumeInfo.authors[0],
-                 
+
                     description: selectedBook.volumeInfo.description,
-                
+
                     image: selectedBook.volumeInfo.imageLinks.thumbnail
                 };
 
-        
+
                 $.post("/api/books", newBook)
                     // on success, run this callback
                     .then(function (data) {
-                      
-                      
+
+
                     });
                 $("#book-search").val("");
 
