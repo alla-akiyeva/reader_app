@@ -17,12 +17,12 @@ The Reader is your personal book catalog that simplifies your search for books a
 Abhishek:
 - Integration of Voice recognition using javascript in Frontend/Backend
 - Front-End for Updates pages
-- Front-End Integration of Google Books API in Index page
+- Front-End Integration of Google Books API in Index page i.e. using an existing public dataset to power the database
 - Front-End part of Index, Library which links with Backend-End
 - Creation of API endpoints for the Reader application
 - Backend of Index, Library page
 - Database design and development
-- Database migration strategy via GitHub --> Heroku
+- Database migration strategy for sharing data across team members and Heroku
 
 Alla:
 - HTML (Production Version) for Index , Updates, Library using Bootstrap
