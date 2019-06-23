@@ -22,7 +22,7 @@ Abhishek:
 - Creation of API endpoints for the Reader application
 - Backend of Index, Library page
 - Database design and development
-- Database migration to Heroku
+- Database migration strategy via GitHub --> Heroku
 
 Alla:
 - HTML (Production Version) for Index , Updates, Library using Bootstrap
